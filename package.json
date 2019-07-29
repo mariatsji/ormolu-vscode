@@ -1,0 +1,41 @@
+{
+    "name": "ormolu-vscode",
+    "displayName": "ormolu",
+    "version": "0.0.1",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/mariatsji/ormolu-vscode"
+    },
+    "icon": "images/icon.png",
+    "description": "VS Code extension for Haskell code formatting based on ormolu tool",
+    "engines": {
+        "vscode": "^1.9.0"
+    },
+    "categories": [
+        "Formatters"
+    ],
+    "activationEvents": [
+        "onLanguage:haskell"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "haskell"
+            }
+        ]
+    },
+    "scripts": {
+        "compile": "tsc",
+        "postinstall": "node ./node_modules/vscode/bin/install && tsc"
+    },
+    "devDependencies": {
+        "@types/node": "*",
+        "typescript": "2.7",
+        "vscode": "^1.1.35"
+    },
+    "main": "./out/src/extension",
+    "author": "Sjur Millidahl",
+    "publisher": "sjur-millidahl",
+    "license": "MIT",
+    "private": false
+}
