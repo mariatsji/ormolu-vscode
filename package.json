@@ -35,7 +35,7 @@
     },
     "main": "./out/src/extension",
     "author": "Sjur Millidahl",
-    "publisher": "sjur-millidahl",
+    "publisher": "mariatsji",
     "license": "MIT",
     "private": false
 }
