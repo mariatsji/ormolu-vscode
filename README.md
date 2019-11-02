@@ -3,7 +3,7 @@ VS Code extension for Haskell code formatting based on [ormolu tool](https://git
 
 ## Usage
 
-1. Install ormolu `git clone https://github.com/tweag/ormolu && cd ormolu && stack install`
+1. Install [https://github.com/tweag/ormolu(ormolu)
 2. Use VS Code's built-in format or format selection commands.
 
 ## Credits
