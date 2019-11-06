@@ -22,7 +22,18 @@
             {
                 "id": "haskell"
             }
-        ]
+        ],
+        "configuration": {
+            "title": "ormolu configuration",
+            "type": "object",
+            "properties": {
+                "ormolu.path": {
+                    "type": "string",
+                    "default": "ormolu",
+                    "description": "Path to the ormolu executable."
+                }
+            }
+        }
     },
     "scripts": {
         "compile": "tsc",
