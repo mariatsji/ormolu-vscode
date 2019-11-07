@@ -1,7 +1,7 @@
 {
     "name": "ormolu-vscode",
     "displayName": "ormolu",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "repository": {
         "type": "git",
         "url": "https://github.com/mariatsji/ormolu-vscode"
@@ -22,7 +22,18 @@
             {
                 "id": "haskell"
             }
-        ]
+        ],
+        "configuration": {
+            "title": "Ormolu",
+            "type": "object",
+            "properties": {
+                "ormolu.path": {
+                    "type": "string",
+                    "default": "ormolu",
+                    "description": "Path to the ormolu executable."
+                }
+            }
+        }
     },
     "scripts": {
         "compile": "tsc",
