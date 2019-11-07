@@ -2,3 +2,4 @@ out/
 node_modules/
 .vsix
 azure.txt
+.DS_Store
