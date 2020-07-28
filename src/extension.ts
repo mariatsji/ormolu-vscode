@@ -13,9 +13,11 @@ export function activate(context: vscode.ExtensionContext) {
         const formattedText = ormolu.toString();
         return [vscode.TextEdit.replace(range, formattedText)];
       } catch (e) {
-        vscode.window.showErrorMessage(
-          "ormolu failed to format the code. " + e.stderr.toString()
-        );
+        if (vscode.workspace.getConfiguration('ormolu').get('notifyOnParseError')) {
+          vscode.window.showErrorMessage(
+            " ormolu failed to format the code. " + e.stderr.toString()
+          );
+        }
         console.log(e.stdout.toString());
       }
     }

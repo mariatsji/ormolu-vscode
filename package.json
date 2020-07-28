@@ -27,6 +27,11 @@
             "title": "Ormolu",
             "type": "object",
             "properties": {
+                "ormolu.notifyOnParseError": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "If set to true, notify you every time ormolu fails to parse a file"
+                },
                 "ormolu.path": {
                     "type": "string",
                     "default": "ormolu",
