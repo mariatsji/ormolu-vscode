@@ -1,7 +1,7 @@
 {
     "name": "ormolu-vscode",
     "displayName": "ormolu",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "repository": {
         "type": "git",
         "url": "https://github.com/mariatsji/ormolu-vscode"
@@ -46,8 +46,8 @@
     },
     "devDependencies": {
         "@types/node": "*",
-        "typescript": "3.6.4",
-        "vscode": "^1.1.36"
+        "typescript": "3.9.7",
+        "vscode": "^1.1.37"
     },
     "main": "./out/src/extension",
     "author": "Sjur Millidahl",
