@@ -9,7 +9,7 @@ export function activate(context: vscode.ExtensionContext) {
       const text = document.getText(range);
       try {
         const config = vscode.workspace.getConfiguration("ormolu");
-        const ormolu = cp.execSync(config.path, { input: text });
+        const ormolu = cp.execSync(config.path, { input: text, cwd: vscode.workspace.getWorkspaceFolder(document.uri).uri.path });
         const formattedText = ormolu.toString();
         return [vscode.TextEdit.replace(range, formattedText)];
       } catch (e) {
