@@ -1,7 +1,7 @@
 {
     "name": "ormolu-vscode",
     "displayName": "ormolu",
-    "version": "0.0.7",
+    "version": "0.0.8",
     "repository": {
         "type": "git",
         "url": "https://github.com/mariatsji/ormolu-vscode"
@@ -36,6 +36,11 @@
                     "type": "string",
                     "default": "ormolu",
                     "description": "Path to the ormolu executable."
+                },
+                "ormolu.args": {
+                    "type": "array",
+                    "default": [],
+                    "description": "Additional arguments to pass to ormolu."
                 }
             }
         }
