@@ -12,13 +12,13 @@ export function activate(context: vscode.ExtensionContext) {
       const text = document.getText(range);
       try {
         const config = vscode.workspace.getConfiguration("ormolu");
-        const args = config.args.join(" ");
-        var cmd = config.path
-        if (config.args.length > 0) {
-          cmd = config.path + " " + args;
-        }
-        log.appendLine("Calling: " + cmd);
-        const ormolu = cp.execSync(cmd, { input: text, cwd: vscode.workspace.getWorkspaceFolder(document.uri).uri.path });
+        const args = config.args + ["--stdin-input-file", document.uri];
+        log.appendLine("Calling: " + config.path + args);
+        const ormolu = cp.execFileSync(
+          config.path,
+          args,
+          { input: text, cwd: vscode.workspace.getWorkspaceFolder(document.uri).uri.path }
+        );
         const formattedText = ormolu.toString();
         return [vscode.TextEdit.replace(range, formattedText)];
       } catch (e) {

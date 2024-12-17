@@ -46,13 +46,12 @@
         }
     },
     "scripts": {
-        "compile": "tsc",
-        "postinstall": "node ./node_modules/vscode/bin/install && tsc"
+        "compile": "tsc"
     },
     "devDependencies": {
         "@types/node": "*",
-        "typescript": "3.9.7",
-        "vscode": "^1.1.37"
+        "@types/vscode": "^1.96",
+        "typescript": "3.9.7"
     },
     "main": "./out/src/extension",
     "author": "Sjur Millidahl",
